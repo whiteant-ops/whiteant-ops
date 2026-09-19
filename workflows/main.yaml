@@ -2,29 +2,66 @@ name: build profile assets
 
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: generate youtube music widget
-        uses: daeun503/profile-music-widget@v1
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          playlist_id: ${{ vars.YT_PLAYLIST_ID }}
-          theme: ${{ vars.YT_THEME }}
+          python-version: '3.12'
 
-      - name: Deploy dist to output branch
+      - name: Install dependencies
+        run: pip install requests Pillow
+
+      - name: Generate music widget
+        env:
+          YT_PLAYLIST_ID: ${{ secrets.YT_PLAYLIST_ID }}
+        run: python scripts/make_widget.py
+
+      - name: Generate GitHub stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/make_stats.py
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in assets/music-widget.svg assets/github-stats.svg; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --staged --quiet; then
+            echo "✓ Tidak ada perubahan, skip commit."
+          else
+            git commit -m "chore: refresh profile assets [skip ci]"
+            git push
+          fi
+
+      - name: Prepare dist
+        run: |
+          mkdir -p dist
+          find assets -maxdepth 1 -name '*.svg' -exec cp {} dist/ \;
+
+      - name: Deploy to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
