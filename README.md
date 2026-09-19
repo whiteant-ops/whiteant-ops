@@ -1,14 +1,3 @@
-Nih versi rapi lengkap. Yang aku perbaiki:
-
-- **Konsistensi heading** (semua pakai `###` sejajar)
-- **Music widget** — sebelumnya ada `<p>` nested di dalam `<a>` (HTML invalid). Sudah dibetulkan
-- **Stats section** — diganti pakai `stats.svg` + `top-langs.svg` + `streak.svg` (yang kamu generate sendiri), bukan lagi `github-readme-streak-stats.herokuapp.com` yang sering down
-- **Urutan logis** — banner → intro → tech → stats → projects → personal → footer
-- **Spacing** antar section konsisten
-
----
-
-```markdown
 <!-- ═══════════════════════════════════════════════ -->
 <!--                    BANNER                       -->
 <!-- ═══════════════════════════════════════════════ -->
@@ -51,83 +40,14 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 - 🎯 I write **clean, tested, and secure** code — no shortcuts
 - 🍥 Fun fact: I debug better at **2 AM with anime on the second monitor**
 
----
-
-<!-- ═══════════════════════════════════════════════ -->
-<!--                TECH ARSENAL                     -->
-<!-- ═══════════════════════════════════════════════ -->
-
-<h3 align="center">🛠️ Tech Arsenal</h3>
-
-<h4 align="center">🧠 Languages</h4>
-
-<p align="center">
-  <a href="https://www.typescriptlang.org" title="TypeScript"><img src="https://skillicons.dev/icons?i=ts" height="40" alt="TypeScript"/></a>
-  <a href="https://go.dev" title="Go"><img src="https://skillicons.dev/icons?i=go" height="40" alt="Go"/></a>
-  <a href="https://www.rust-lang.org" title="Rust"><img src="https://skillicons.dev/icons?i=rust" height="40" alt="Rust"/></a>
-  <a href="https://www.python.org" title="Python"><img src="https://skillicons.dev/icons?i=py" height="40" alt="Python"/></a>
-  <a href="https://www.php.net" title="PHP"><img src="https://skillicons.dev/icons?i=php" height="40" alt="PHP"/></a>
-</p>
-
-<h4 align="center">🎨 Frontend</h4>
-
-<p align="center">
-  <a href="https://react.dev" title="React"><img src="https://skillicons.dev/icons?i=react" height="40" alt="React"/></a>
-  <a href="https://nextjs.org" title="Next.js"><img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="Next.js"/></a>
-  <a href="https://tailwindcss.com" title="TailwindCSS"><img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="TailwindCSS"/></a>
-  <a href="https://vitejs.dev" title="Vite"><img src="https://skillicons.dev/icons?i=vite" height="40" alt="Vite"/></a>
-</p>
-
-<h4 align="center">⚙️ Backend & Frameworks</h4>
-
-<p align="center">
-  <a href="https://laravel.com" title="Laravel"><img src="https://skillicons.dev/icons?i=laravel" height="40" alt="Laravel"/></a>
-  <a href="https://nodejs.org" title="Node.js"><img src="https://skillicons.dev/icons?i=nodejs" height="40" alt="Node.js"/></a>
-  <a href="https://gofiber.io" title="Fiber"><img src="https://skillicons.dev/icons?i=go" height="40" alt="Fiber"/></a>
-  <a href="https://fastapi.tiangolo.com" title="FastAPI"><img src="https://skillicons.dev/icons?i=fastapi" height="40" alt="FastAPI"/></a>
-</p>
-
-<h4 align="center">⛓️ Web3</h4>
-
-<p align="center">
-  <a href="https://solana.com" title="Solana"><img src="https://skillicons.dev/icons?i=solana" height="40" alt="Solana"/></a>
-  <a href="https://www.anchor-lang.com" title="Anchor"><img src="https://skillicons.dev/icons?i=rust" height="40" alt="Anchor"/></a>
-  <a href="https://ethereum.org" title="Ethereum"><img src="https://skillicons.dev/icons?i=ethereum" height="40" alt="Ethereum"/></a>
-</p>
-
-<h4 align="center">📊 Data & Security</h4>
-
-<p align="center">
-  <a href="https://pandas.pydata.org" title="Pandas"><img src="https://skillicons.dev/icons?i=pandas" height="40" alt="Pandas"/></a>
-  <a href="https://jupyter.org" title="Jupyter"><img src="https://skillicons.dev/icons?i=jupyter" height="40" alt="Jupyter"/></a>
-  <a href="https://www.wireshark.org" title="Wireshark"><img src="https://skillicons.dev/icons?i=linux" height="40" alt="Wireshark"/></a>
-  <a href="https://www.kali.org" title="Kali Linux"><img src="https://skillicons.dev/icons?i=kali" height="40" alt="Kali Linux"/></a>
-</p>
-
-<h4 align="center">🛠️ Infra & Tools</h4>
-
-<p align="center">
-  <a href="https://www.docker.com" title="Docker"><img src="https://skillicons.dev/icons?i=docker" height="40" alt="Docker"/></a>
-  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres" height="40" alt="PostgreSQL"/></a>
-  <a href="https://redis.io" title="Redis"><img src="https://skillicons.dev/icons?i=redis" height="40" alt="Redis"/></a>
-  <a href="https://www.linux.org" title="Linux"><img src="https://skillicons.dev/icons?i=linux" height="40" alt="Linux"/></a>
-</p>
-
----
-
 <!-- ═══════════════════════════════════════════════ -->
 <!--                GITHUB STATS                     -->
 <!-- ═══════════════════════════════════════════════ -->
 
-<h3 align="center">📊 GitHub Stats</h3>
+---
 
 <p align="center">
-  <img height="180em" src="https://raw.githubusercontent.com/whiteant-ops/whiteant-ops/output/stats.svg" alt="GitHub Stats"/>
-  <img height="180em" src="https://raw.githubusercontent.com/whiteant-ops/whiteant-ops/output/top-langs.svg" alt="Top Languages"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/whiteant-ops/whiteant-ops/output/streak.svg" alt="Streak"/>
+  <img height="180em" src="./assets/github-stats.svg" alt="GitHub Stats"/>
 </p>
 
 ---
