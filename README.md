@@ -131,7 +131,6 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
   <img src="./assets/music-widget.svg" alt="Now Playing" width="350"/>
   </p>
 </a>
-
 <p align="center">
   <i>Auto-updated every 24h via GitHub Actions</i>
 </p>
