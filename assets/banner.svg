@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#0a0f16"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Star field pattern -->
+    <radialGradient id="star" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- Grid lines (subtle tech feel) -->
+  <g stroke="#1f6feb" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="80" x2="1280" y2="80"/>
+    <line x1="0" y1="160" x2="1280" y2="160"/>
+    <line x1="0" y1="240" x2="1280" y2="240"/>
+    <line x1="320" y1="0" x2="320" y2="320"/>
+    <line x1="640" y1="0" x2="640" y2="320"/>
+    <line x1="960" y1="0" x2="960" y2="320"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="url(#star)">
+    <circle cx="140" cy="60" r="1.5"/>
+    <circle cx="280" cy="110" r="1"/>
+    <circle cx="420" cy="45" r="1.8"/>
+    <circle cx="560" cy="90" r="1.2"/>
+    <circle cx="720" cy="55" r="1.5"/>
+    <circle cx="880" cy="100" r="1"/>
+    <circle cx="1040" cy="70" r="1.8"/>
+    <circle cx="1180" cy="120" r="1.3"/>
+    <circle cx="200" cy="250" r="1.2"/>
+    <circle cx="500" cy="270" r="1.5"/>
+    <circle cx="820" cy="240" r="1.1"/>
+    <circle cx="1100" cy="260" r="1.6"/>
+  </g>
+
+  <!-- Moon (anime-ish crescent) -->
+  <g transform="translate(1090, 70)" filter="url(#glow)">
+    <circle r="32" fill="#f0f6fc" opacity="0.95"/>
+    <circle cx="10" cy="-6" r="30" fill="#0d1117"/>
+  </g>
+
+  <!-- ═══════════ ANT SILHOUETTE (hero) ═══════════ -->
+  <g transform="translate(180, 200)" fill="#f0f6fc" filter="url(#softGlow)">
+
+    <!-- Left leg group (back legs) -->
+    <g stroke="#f0f6fc" stroke-width="3.5" stroke-linecap="round" fill="none">
+      <!-- Back-left legs -->
+      <path d="M 20,0 L -8,-26 L -22,-10"/>
+      <path d="M 20,4 L -12,20 L -28,40"/>
+      <!-- Mid-left legs -->
+      <path d="M 34,0 L 20,-30 L 6,-16"/>
+      <path d="M 34,4 L 18,24 L 6,44"/>
+      <!-- Front-left legs -->
+      <path d="M 46,0 L 62,-28 L 78,-14"/>
+      <path d="M 46,4 L 64,22 L 80,42"/>
+    </g>
+
+    <!-- Body segments -->
+    <!-- Abdomen -->
+    <ellipse cx="12" cy="0" rx="20" ry="14"/>
+    <!-- Thorax -->
+    <ellipse cx="38" cy="0" rx="13" ry="10"/>
+    <!-- Head -->
+    <ellipse cx="58" cy="0" rx="10" ry="9"/>
+
+    <!-- Antennae -->
+    <g stroke="#f0f6fc" stroke-width="2.2" stroke-linecap="round" fill="none">
+      <path d="M 64,-6 Q 76,-22 92,-26"/>
+      <path d="M 64,6 Q 78,18 94,16"/>
+    </g>
+
+    <!-- Eye (glowing) -->
+    <circle cx="60" cy="-2" r="1.8" fill="#58A6FF" filter="url(#glow)"/>
+  </g>
+
+  <!-- ═══════════ WORDMARK ═══════════ -->
+  <g transform="translate(340, 130)">
+    <!-- Main title -->
+    <text x="0" y="0"
+          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
+          font-size="72"
+          font-weight="700"
+          fill="#f0f6fc"
+          letter-spacing="1"
+          filter="url(#softGlow)">
+      The White Ants
+    </text>
+
+    <!-- Subtitle -->
+    <text x="4" y="42"
+          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
+          font-size="20"
+          font-weight="400"
+          fill="#58A6FF"
+          letter-spacing="4">
+      CODE IN THE DARK · BUILD IN SILENCE
+    </text>
+
+    <!-- Username tag -->
+    <text x="4" y="80"
+          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
+          font-size="16"
+          font-weight="400"
+          fill="#8b949e"
+          letter-spacing="1">
+      @whiteant-ops
+    </text>
+  </g>
+
+  <!-- Accent line -->
+  <rect x="0" y="316" width="1280" height="4" fill="#1f6feb" opacity="0.6"/>
+</svg>
