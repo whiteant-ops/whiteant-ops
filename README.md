@@ -1,6 +1,4 @@
-<!-- ═══════════════════════════════════════════════ -->
 <!--                    BANNER                       -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <p align="center">
   <img src="./assets/banner.svg" alt="The White Ants — Code in the Dark, Build in Silence" width="100%" />
@@ -19,9 +17,7 @@
 
 ---
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--                  ABOUT ME                       -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <h3 align="center">🌙 About Me</h3>
 
@@ -40,9 +36,7 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 - 🎯 I write **clean, tested, and secure** code — no shortcuts
 - 🍥 Fun fact: I debug better at **2 AM with anime on the second monitor**
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--                GITHUB STATS                     -->
-<!-- ═══════════════════════════════════════════════ -->
 
 ---
 
@@ -52,9 +46,7 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 
 ---
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--              FEATURED PROJECTS                  -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <h3 align="center">🚀 Featured Projects</h3>
 
@@ -67,9 +59,7 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 
 ---
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--                ANIME CORNER                     -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <h3 align="center">🍥 Anime Corner <em>(dark mode approved)</em></h3>
 
@@ -86,9 +76,7 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 
 ---
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--               MUSIC WIDGET                      -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <h3 align="center">🎧 Now Playing</h3>
 
@@ -104,9 +92,7 @@ philosophy:  "Small ants, big systems — quiet, but they build everything."
 
 ---
 
-<!-- ═══════════════════════════════════════════════ -->
 <!--                   FOOTER                        -->
-<!-- ═══════════════════════════════════════════════ -->
 
 <p align="center">
   <i>Build quietly. Ship loudly. 🌙</i>
